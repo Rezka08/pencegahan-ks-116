@@ -27,16 +27,16 @@
                             900: '#1e3a8a',
                         },
                         accent: {
-                            500: '#8b5cf6', // Violet
+                            500: '#8b5cf6',
                             600: '#7c3aed',
                         },
                         danger: {
                             50: '#fff1f2',
-                            500: '#f43f5e', // Rose
+                            500: '#f43f5e',
                             600: '#e11d48',
                         },
                         warning: {
-                            500: '#f59e0b', // Amber
+                            500: '#f59e0b',
                         }
                     },
                     animation: {
@@ -141,17 +141,15 @@
                 <div class="relative hidden lg:block h-[500px] w-full reveal delay-200">
                     <div class="absolute inset-0 bg-gradient-to-tr from-primary-100 to-accent-50 rounded-[3rem] transform rotate-3 scale-105 opacity-50"></div>
                     <div class="absolute inset-0 glass-card rounded-[3rem] shadow-2xl p-8 flex flex-col justify-between items-center overflow-hidden border border-white">
-                        <!-- Decorative elements inside glass card -->
-                        <div class="absolute top-10 -right-10 text-9xl text-primary-50 opacity-50 transform rotate-12"><i class="fa-solid fa-shapes"></i></div>
-                        <div class="absolute -bottom-10 -left-10 text-9xl text-accent-50 opacity-50"><i class="fa-solid fa-puzzle-piece"></i></div>
-                        
-                        <!-- Central Main Icon Background -->
-                        <div class="absolute inset-0 flex items-center justify-center opacity-[0.07] pointer-events-none">
-                            <i class="fa-solid fa-children text-[16rem] text-primary-900"></i>
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 pointer-events-none">
+                            <img src="images/foto-keluarga.webp" alt="Keluarga" class="w-full h-full object-cover">
+                            <!-- Overlay to ensure text readability -->
+                            <div class="absolute inset-0 bg-white/25 backdrop-blur-[2px]"></div>
                         </div>
 
                         <!-- Card 1 -->
-                        <div class="relative z-10 bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-lg border border-white/50 w-5/6 self-start animate-float transform hover:scale-105 transition-transform duration-300">
+                        <div class="relative z-10 bg-white/40 backdrop-blur-xl rounded-2xl p-5 shadow-xl border border-white/60 w-5/6 self-start animate-float transform hover:scale-105 transition-transform duration-300">
                             <div class="flex gap-4 items-center">
                                 <div class="w-14 h-14 rounded-xl bg-warning-100 text-warning-500 flex items-center justify-center text-2xl shadow-inner shrink-0">
                                     <i class="fa-solid fa-child-reaching"></i>
@@ -165,13 +163,13 @@
 
                         <!-- Middle Badge Elements -->
                         <div class="relative z-10 self-center my-auto">
-                            <div class="bg-white text-gray-800 px-6 py-2.5 rounded-full font-bold shadow-sm border border-gray-200 flex items-center gap-3">
+                            <div class="bg-white/60 backdrop-blur-lg text-gray-800 px-6 py-2.5 rounded-full font-bold shadow-md border border-white/60 flex items-center gap-3">
                                 <i class="fa-solid fa-shield-halved text-primary-600 text-lg"></i> Ciptakan Ruang Aman
                             </div>
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="relative z-10 bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-lg border border-white/50 w-5/6 self-end animate-float-delayed transform hover:scale-105 transition-transform duration-300">
+                        <div class="relative z-10 bg-white/40 backdrop-blur-xl rounded-2xl p-5 shadow-xl border border-white/60 w-5/6 self-end animate-float-delayed transform hover:scale-105 transition-transform duration-300">
                             <div class="flex gap-4 items-center">
                                 <div class="w-14 h-14 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center text-2xl shadow-inner shrink-0">
                                     <i class="fa-solid fa-user-shield"></i>
@@ -208,7 +206,7 @@
                 
                 <div class="bg-gradient-to-br from-accent-50 to-purple-50 rounded-3xl p-8 border border-accent-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 reveal delay-100">
                     <div class="w-14 h-14 bg-white rounded-2xl shadow-sm text-accent-600 flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-book-section"></i>
+                        <i class="fa-solid fa-book"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">KUHPerdata</h3>
                     <p class="text-gray-600 leading-relaxed text-lg">Anak adalah seseorang yang <strong>belum berusia 21 tahun</strong> dan belum melangsungkan perkawinan.</p>
@@ -225,7 +223,7 @@
                     <div class="hidden md:block w-32 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full"></div>
                 </div>
 
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <div class="grid grid-cols-1 sm:flex sm:flex-wrap gap-4 justify-center md:justify-start">
                     <!-- Colorful Pills for Rights -->
                     <div class="group px-6 py-4 bg-white border-2 border-gray-100 rounded-2xl hover:border-blue-400 hover:bg-blue-50 transition-all cursor-default shadow-sm hover:shadow-md flex items-center gap-3">
                         <i class="fa-solid fa-id-card text-blue-500 text-xl group-hover:scale-110 transition-transform"></i>
@@ -360,9 +358,9 @@
             </div>
 
             <!-- Grid Jenis Kekerasan -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            <div class="flex overflow-x-auto snap-x snap-mandatory md:grid md:overflow-visible md:snap-none gap-6 pb-8 md:pb-0 mb-20 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 no-scrollbar md:grid-cols-2 lg:grid-cols-3">
                 <!-- Card -->
-                <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal">
+                <div class="shrink-0 w-[85vw] sm:w-[350px] md:w-auto snap-center md:snap-none group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal">
                     <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
                         <i class="fa-regular fa-comment-dots"></i>
                     </div>
@@ -370,7 +368,7 @@
                     <p class="text-gray-500">Komentar bernada seksual, siulan (catcalling), atau gestur tubuh yang mengganggu kenyamanan korban.</p>
                 </div>
                 <!-- Card -->
-                <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal delay-100">
+                <div class="shrink-0 w-[85vw] sm:w-[350px] md:w-auto snap-center md:snap-none group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal delay-100">
                     <div class="w-16 h-16 bg-danger-50 text-danger-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-danger-600 group-hover:text-white transition-all">
                         <i class="fa-solid fa-hand-holding-hand"></i>
                     </div>
@@ -378,7 +376,7 @@
                     <p class="text-gray-500">Sentuhan, rabaan, gesekan, atau kontak fisik lain yang tidak diinginkan dan bernuansa seksual.</p>
                 </div>
                 <!-- Card -->
-                <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal delay-200">
+                <div class="shrink-0 w-[85vw] sm:w-[350px] md:w-auto snap-center md:snap-none group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal delay-200">
                     <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all">
                         <i class="fa-solid fa-mobile-screen"></i>
                     </div>
@@ -386,7 +384,7 @@
                     <p class="text-gray-500">Penyebaran konten intim tanpa izin, teror seksual via chat, perekaman paksa, atau ancaman distribusi foto/video.</p>
                 </div>
                 <!-- Card -->
-                <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal">
+                <div class="shrink-0 w-[85vw] sm:w-[350px] md:w-auto snap-center md:snap-none group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal">
                     <div class="w-16 h-16 bg-warning-50 text-warning-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-warning-500 group-hover:text-white transition-all">
                         <i class="fa-solid fa-masks-theater"></i>
                     </div>
@@ -394,7 +392,7 @@
                     <p class="text-gray-500">Membangun kepercayaan atau memanipulasi emosi anak (bujukan/tipu muslihat) untuk tujuan seksual.</p>
                 </div>
                 <!-- Card -->
-                <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal delay-100">
+                <div class="shrink-0 w-[85vw] sm:w-[350px] md:w-auto snap-center md:snap-none group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal delay-100">
                     <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-teal-500 group-hover:text-white transition-all">
                         <i class="fa-solid fa-coins"></i>
                     </div>
@@ -402,7 +400,7 @@
                     <p class="text-gray-500">Memanfaatkan atau memperdagangkan anak untuk keuntungan materiil (uang/barang) melalui aktivitas seksual.</p>
                 </div>
                 <!-- Card -->
-                <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal delay-200">
+                <div class="shrink-0 w-[85vw] sm:w-[350px] md:w-auto snap-center md:snap-none group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 reveal delay-200">
                     <div class="w-16 h-16 bg-gray-100 text-gray-800 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-gray-800 group-hover:text-white transition-all">
                         <i class="fa-solid fa-ban"></i>
                     </div>
@@ -585,7 +583,7 @@
                 </div>
                 <div>
                     <h3 class="font-bold text-xl tracking-wide">KKN Universitas Hasanuddin</h3>
-                    <p class="text-gray-400 text-sm">Sosialisasi Pencegahan Kekerasan Seksual</p>
+                    <p class="text-gray-400 text-sm">Pendidikan Berbasis Pengabdian Kepada Masyarakat</p>
                 </div>
             </div>
             

@@ -41,12 +41,12 @@ const navbar = document.getElementById('navbar');
 const navContainer = document.getElementById('nav-container');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
-        navContainer.classList.add('bg-white/95', 'shadow-md', 'backdrop-blur-xl');
+        navContainer.classList.add('glass-nav-scrolled');
         navContainer.classList.remove('glass-nav');
         navbar.classList.remove('pt-4');
         navbar.classList.add('pt-2');
     } else {
-        navContainer.classList.remove('bg-white/95', 'shadow-md', 'backdrop-blur-xl');
+        navContainer.classList.remove('glass-nav-scrolled');
         navContainer.classList.add('glass-nav');
         navbar.classList.add('pt-4');
         navbar.classList.remove('pt-2');
