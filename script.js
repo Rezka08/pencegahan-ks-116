@@ -68,3 +68,9 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 // Trigger once on load to show above-the-fold content
 setTimeout(reveal, 100);
+
+// Set current year in footer dynamically
+const currentYearElement = document.getElementById('current-year');
+if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+}
