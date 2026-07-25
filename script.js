@@ -74,3 +74,30 @@ const currentYearElement = document.getElementById('current-year');
 if (currentYearElement) {
     currentYearElement.textContent = new Date().getFullYear();
 }
+
+// Horizontal Scroll Indicators for "Kenali Bentuknya" (Mobile)
+const scrollCards = document.getElementById('scroll-cards');
+const scrollDots = document.getElementById('scroll-dots');
+
+if (scrollCards && scrollDots) {
+    const dots = scrollDots.querySelectorAll('.dot');
+    scrollCards.addEventListener('scroll', () => {
+        const scrollPosition = scrollCards.scrollLeft;
+        const maxScroll = scrollCards.scrollWidth - scrollCards.clientWidth;
+        
+        if (maxScroll > 0) {
+            const scrollPercentage = scrollPosition / maxScroll;
+            let activeIndex = Math.round(scrollPercentage * (dots.length - 1));
+            
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.remove('w-2', 'bg-gray-300');
+                    dot.classList.add('w-4', 'bg-primary-600');
+                } else {
+                    dot.classList.remove('w-4', 'bg-primary-600');
+                    dot.classList.add('w-2', 'bg-gray-300');
+                }
+            });
+        }
+    });
+}
